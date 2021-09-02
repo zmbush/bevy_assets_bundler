@@ -35,8 +35,8 @@ encryption = ["aes", "block-modes"]
 # compression = ["brotli"]
 
 [dependencies]
-# https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#tilde-requirements
-bevy = {version = "~0.5", default-features = false}
+# https://doc.rust-lang.org/cargo/reference/specifying-deddddpendencies.html#tilde-requirements
+bevy = {git="https://github.com/bevyengine/bevy", branch="main", default-features = false}
 
 anyhow = "1"
 bs58 = "0.4"
