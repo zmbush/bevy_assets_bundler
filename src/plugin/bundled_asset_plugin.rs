@@ -35,7 +35,7 @@ impl Plugin for BundledAssetIoPlugin {
             }
         }
         let task_pool = app
-            .world()
+            .world
             .get_resource::<IoTaskPool>()
             .expect("`IoTaskPool` resource not found.")
             .0
