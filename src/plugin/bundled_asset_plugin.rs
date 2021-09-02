@@ -1,7 +1,7 @@
 use super::BundledAssetIo;
 use crate::AssetBundlingOptions;
 use bevy::{
-    app::{AppBuilder, Plugin},
+    app::{App, Plugin},
     asset::AssetServer,
     tasks::IoTaskPool,
 };
@@ -25,7 +25,7 @@ impl From<AssetBundlingOptions> for BundledAssetIoPlugin {
 }
 
 impl Plugin for BundledAssetIoPlugin {
-    fn build(&self, app: &mut AppBuilder) {
+    fn build(&self, app: &mut App) {
         cfg_if::cfg_if! {
             if #[cfg(debug_assertions)]{
                 if !self.options.enabled_on_debug_build {
